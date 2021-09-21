@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SearchingOutlet</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class= "notifications">
+      <%= notice %>
+      <%= alert %>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <footer>
+      <%= link_to root_path do %>
+        <img src="/assets/logo.jpg", alt="ロゴ画像">
+      <% end %>
+      <div class="row_text_center">
+        <div class="link_content">
+          <%= link_to "新規登録", new_user_path %>
+        </div>
+        <div class="link_content">
+          <%= link_to "ログイン", login_path %>
+        </div>
+        <div class="link_content">
+          <%= link_to "利用規約" %>
+        </div>
+        <div class="link_content">
+          <a href>
+            <%= link_to "プライバシーポリシー" %>
+          </a>
+        </div>
+      </div>
+      <div class="text_center_web_copylight">
+        Copyright © 2020-2021 Searching Outlet. All Rights Reserved.
+      </div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+      <script>
+        window.sr = ScrollReveal({ reset: false ,mobile: true});
+        sr.reveal( '.worries_item', { origin: 'left' , distance: '80%', duration: 800 , scale: 1.0, delay :1000 ,opacity: 0.5,});
+        sr.reveal( '.possible_to_three', { origin: 'bottom' , distance: '50%', duration: 500 , scale: 1.0, delay :700 ,opacity: 0.5, viewFactor: 0.8,});
+        sr.reveal( '.possible_to_three_area', { origin: 'bottom' , distance: '50%', duration: 500 , scale: 1.0, delay :700 ,opacity: 0.5, viewFactor: 0.5,});
+      </script>
+  </body>
+</html>

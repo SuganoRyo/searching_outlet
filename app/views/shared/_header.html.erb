@@ -1,0 +1,13 @@
+<header>
+  <%= link_to root_path do %>
+    <img src="/assets/logo.jpg" , alt="ロゴ画像">
+  <% end %>
+  <div class="button-content">
+    <%= link_to new_user_path do %>
+      <button class="btn new_user_btn">新規登録</button>
+    <% end %>
+    <%= link_to login_path do %>
+      <button class="btn login_user_btn">ログイン</button>
+    <% end %>
+  </div>
+</header>

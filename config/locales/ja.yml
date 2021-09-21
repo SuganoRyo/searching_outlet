@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+      cafe: カフェ
+    attributes:
+      user:
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: 確認用パスワード
+      cafe:
+        image: 画像
+        name: 店名
+        address: 住所
+        number_seats: コンセント席数

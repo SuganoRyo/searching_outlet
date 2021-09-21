@@ -1,0 +1,123 @@
+<%= render "shared/header" %>
+<div class="application_top">
+  <img src="/assets/application_top2.jpg", alt="cafe_img">
+  <div class="catch_copy">
+    <div class="catch_text">
+      近くにあるコンセント付き<br>cafeを探せるアプリ    
+    </div>
+    <div class="text_content">
+      <%= link_to new_user_path do %>
+        <button class="btn_start_app" >今すぐ始める</button>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="application_about">
+  <div class="about_title">
+    <img src="/assets/logo.jpg", alt="ロゴ画像">
+    <span class="about_title_text">とは？</span>
+  </div>
+  <p class="about_description">
+    自分の住んでいる地域からコンセントのあるカフェをすぐさま検索可能!!<br>
+    地域を絞り込んでカフェを探したり、自分で新たに見つけたカフェを<br>
+    みんなに共有できるwebサービスアプリです。
+  </p>
+</div>
+<div class="pc_user_worries">
+  <div class="worries_img">
+    <img src="/assets/pc_user_worries.png", alt="カフェで雑談の画僧">
+  </div>
+  <div class="worries_area">
+    <ul class="worries_list">
+      <span>こんな方におすすめです!</span>
+      <li class="worries_item">
+        <i class="fas fa-pen"></i>
+        コンセントのあるカフェだと思っていたのに無かった。
+      </li>
+      <li class="worries_item">
+        <i class="fas fa-pen"></i>
+        コンセントのある席が埋まっていた。
+      </li>
+      <li class="worries_item">
+        <i class="fas fa-pen"></i>
+        近くのコンセントのあるカフェを探したい。
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="possible_to_three">
+  <span class="title_header">
+    このアプリで出来ること
+  </span>
+  <br>
+  <strong class="title_num">
+    3
+  </strong>
+  つ紹介
+</div>
+<div class="possible_to_three_area">
+  <div class="main_three_described_location">
+    <div class="main_three_text">
+      <div class="main_three_title">
+        No.
+        <strong class="main_three_num">
+          1
+        </strong>
+      </div>
+      <div class="main_three_copy">
+        近くのカフェの設備等を検索
+      </div>
+      <img src="/assets/outlet.jpg", alt="コンセント">
+      <div class="main_three_description">
+        コンセントのある席数や、wifi等があるかわかる。
+      </div>
+    </div>
+  </div>
+  <div class="main_three_described_location">
+    <div class="main_three_text">
+      <div class="main_three_title">
+        No.
+        <strong class="main_three_num">
+          2
+        </strong>
+      </div>
+      <div class="main_three_copy">
+        ユーザー間での情報交換
+      </div>
+      <img src="/assets/share.jpg", alt="ユーザーの情報共有">
+      <div class="main_three_description">
+        登録されていないカフェは発見したユーザーが登録でき、ユーザー同士でカフェの設備等に関する情報の共有ができる。
+      </div>
+    </div>
+  </div>
+  <div class="main_three_described_location">
+    <div class="main_three_text">
+      <div class="main_three_title">
+        No.
+        <strong class="main_three_num">
+          3
+        </strong>
+      </div>
+      <div class="main_three_copy">
+        混雑状況が把握できる
+      </div>
+      <img src="/assets/congestion.jpg", alt="混雑状況">
+      <div class="main_three_description">
+        カフェの時間帯、平日、休日という条件から平均的な混雑状況が把握できる。
+      </div>
+    </div>
+  </div>
+</div>
+<div class="application_recommend">
+  <div class="recommend_item">
+    <div class="recommend_title">
+      すぐ近くのコンセント付きのカフェを探そう!
+    </div>
+    <div class="application_log">
+      <img src="assets/transparent_logo.png", alt="ロゴ画像">
+    </div>
+    <%= link_to new_user_path do %>
+      <button class="btn_start_app" >今すぐ始める</button>
+    <% end %>
+  </div>
+</div>

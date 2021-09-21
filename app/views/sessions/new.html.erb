@@ -1,0 +1,21 @@
+<%= render "shared/header" %>
+<div class="session_form">
+  <h1><i class="fas fa-caret-right"></i>ログイン</h1>
+  <%= form_with url: login_path, local: true do |f| %>
+    <div class="session_field">
+      <%= f.label :メールアドレス %><br>
+      <%= f.text_field :email %>
+    </div>
+
+    <div class="session_field">
+      <%= f.label :パスワード %><br>
+      <%= f.password_field :password %>
+    </div>
+
+    <div class="session_field_other">
+      <%= f.submit "ログイン" %>
+    </div>
+    <p class="member_check">会員ではないですか？</p>
+    <%= link_to "新規登録する", new_user_path %>
+  <% end %>
+</div>

@@ -1,0 +1,42 @@
+<%= render "shared/error_messages", obj: @cafe %>
+<%= form_with(model: cafe) do |form| %>
+  <div class="cafe_form">
+    <div class="field">
+      <%= form.label :イメージ画像 %>
+      <%= form.file_field :image %>
+    </div>
+
+    <div class="field">
+      <%= form.label :店名 %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= form.label :住所 %>
+      <%= form.text_field :address %>
+    </div>
+
+    <div class="field">
+      <%= form.label :営業時間 %>
+      <%= form.time_select :business_hours %>
+      <%= form.time_select :end_business_hours %>
+    </div>
+
+    <div class="field">
+      <%= form.label :コンセント席数 %>
+      <%= form.number_field :number_seats %>
+    </div>
+
+    <div class="field">
+      <%= form.label :wifi %>
+      <%= form.check_box :wifi %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+    <div class="back_link">
+      <%= link_to '戻る', caves_path %>
+    </div>
+  </div>
+<% end %>

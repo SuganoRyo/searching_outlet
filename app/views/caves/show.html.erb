@@ -1,0 +1,52 @@
+<%= render "shared/login_header" %>
+
+<div class="detail_title">カフェ詳細</div>
+  <div class="cafe_detail">
+    <p class="img_detail">
+      <% if @cafe.image? %>
+        <%= image_tag @cafe.image.url %>
+      <% else %>
+        <p>画像なし</p>
+      <% end %>
+    </p>
+    <div class="shop_description">
+      <p>
+        <strong>
+          <i class="fas fa-store"></i>店名:
+        </strong>
+        <%= @cafe.name %>
+      </p>
+      <p>
+        <strong>
+          <i class="fas fa-map-marker"></i>住所:
+        </strong>
+        <%= @cafe.address %>
+      </p>
+      <p>
+        <strong>
+          <i class="fas fa-clock"></i>営業時間:
+        </strong>
+        <%= @cafe.business_hours.strftime( "%H:%M" ) %>~<%= @cafe.end_business_hours.strftime( "%H:%M" ) %>
+      </p>
+      <p>
+        <strong>
+          <i class="fas fa-lightbulb"></i>コンセント席数:
+        </strong>
+        <%= @cafe.number_seats %>席
+      </p>
+      <p>
+        <strong>
+          <i class="fas fa-wifi"></i>Wifi:
+        </strong>
+        <% if @cafe.wifi == true %>
+          <%= @cafe.wifi="◯" %>
+        <% else %>
+          <%= @cafe.wifi="×" %>
+        <% end %>
+      </p>
+    </div>
+    <div class="detail_link">
+      <%= link_to '更新する', edit_cafe_path(@cafe) %> |
+      <%= link_to '戻る', caves_path %>
+    </div>
+  </div>
