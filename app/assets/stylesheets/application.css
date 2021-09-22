@@ -27,7 +27,6 @@ a:-webkit-any-link:hover{
   margin-left: 27%;
   margin-top: 7%;
   padding-top: 5%;
-  box-shadow: 2px 2px 4px rgb(0 0 0 / 12%)
 }
 
 .user_form h1{
@@ -88,8 +87,7 @@ a:-webkit-any-link:hover{
   background-color: #fff;
   margin-left: 27%;
   margin-top: 7%;
-  padding-top: 5%;
-  box-shadow: 2px 2px 4px rgb(0 0 0 / 12%);
+  padding-top: 5%;;
 }
 
 .session_form h1{
@@ -400,8 +398,7 @@ footer img{
   background: #fff;
   width: 80%;
   height: 80%;
-  margin: auto;
-  box-shadow: 2px 2px 4px rgb(0 0 0 / 12%);
+  margin: auto;;
 }
 
 .main_three_text img{
@@ -727,8 +724,7 @@ input[type=checkbox] {
   padding-bottom: 50px;
   padding-top: 50px;
   padding-right: 20px;
-  width: 80%;
-  box-shadow: 2px 2px 4px rgb(0 0 0 / 12%);
+  width: 80%;;
 }
 
 .other_area{
@@ -741,8 +737,7 @@ input[type=checkbox] {
   padding-bottom: 50px;
   padding-top: 50px;
   padding-right: 20px;
-  width: 80%;
-  box-shadow: 2px 2px 4px rgb(0 0 0 / 12%);
+  width: 80%;;
 }
 
 .nagoya_area li{
@@ -778,8 +773,7 @@ input[type=checkbox] {
   background-color: #fff;
   margin-left: 20%;
   margin-top: 10%;
-  padding-top: 2%;
-  box-shadow: 2px 2px 4px rgb(0 0 0 / 12%);
+  padding-top: 2%;;
 }
 
 .show_user_form h1{
@@ -813,8 +807,7 @@ input[type=checkbox] {
   background-color: #fff;
   margin-left: 17%;
   margin-top: 10%;
-  padding-top: 2%;
-  box-shadow: 2px 2px 4px rgb(0 0 0 / 12%);
+  padding-top: 2%;;
 }
 
 .edit_user_form h1{
