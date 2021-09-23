@@ -1,41 +1,60 @@
-version: 2
+version: 2.1
+
+orbs:
+  ruby: circleci/ruby@1.1.2
+  node: circleci/node@2
+
+commands:
+  setup:
+    steps:
+      - checkout
+      - ruby/install-deps
+      - node/install-packages:
+          pkg-manager: yarn
+          cache-key: "yarn.lock"
+
 jobs:
-   build:
-      docker:
-        - image: circleci/ruby:2.7.4-node
-          environment:
-            POSTGRES_USER: postgres 
-            PGHOST: 127.0.0.1
-            RAILS_ENV: test
-        - image: circleci/postgres:13.4
-          environment:
-            POSTGRES_USER: postgres
-            POSTGRES_HOST_AUTH_METHOD: trust
-            POSTGRES_DB: searching_outlet_test
-      working_directory: ~/searching_outlet
-      steps:
-        - checkout
-        - restore_cache:
-            keys:
-              - v1-dependencies-{{ checksum "Gemfile.lock" }}
-              - v1-dependencies-
-        - run:
-            name: install dependencies
-            command: |
-              gem install bundler -v 2.1.4
-              bundle install --jobs=4 --retry=3 --path vendor/bundle
-        - save_cache:
-            key: v1-dependencies-{{ checksum "Gemfile.lock" }}
-            paths:
-              - ./vendor/bundle
-        - run:
-            name: DBの起動を待つ
-            command: dockerize -wait tcp://127.0.0.1:5432 -timeout 120s
-        - run: bundle exec rake db:create
-        - run: bundle exec rake db:schema:load
-        - run:
-            name: rubocopを実行
-            command: bundle exec rubocop
-        - run:
-            name: rspecを実行
-            command: bundle exec rspec
+  build:
+    docker:
+      - image: circleci/ruby:2.7-node
+    steps:
+      - setup
+  test:
+    docker:
+      - image: circleci/ruby:2.7-node
+      - image: circleci/postgres:11.6-alpine
+        name: "db"
+        environment:
+          POSTGRES_USER: postgres
+          POSTGRES_DB: searching_outlet_test
+          POSTGRES_PASSWORD: ""
+    environment:
+      BUNDLE_JOBS: "4"
+      BUNDLE_RETRY: "3"
+      PGHOST: 127.0.0.1
+      PGUSER: postgres
+      PGPASSWORD: ""
+      RAILS_ENV: test
+    steps:
+      - setup
+      - run:
+          name: rails db:migrate
+          command: bundle exec rails db:migrate
+      - run:
+          name: Database setup
+          command: bundle exec rails db:schema:load --trace
+      - run:
+          name: Rspec
+          command: bundle exec rspec
+      - run:
+          name: Rubocop
+          command: bundle exec rubocop
+
+workflows:
+  version: 2
+  test_and_deploy:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
