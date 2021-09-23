@@ -1,0 +1,41 @@
+version: 2
+jobs:
+   build:
+      docker:
+        - image: circleci/ruby:2.7.4-node
+          environment:
+            POSTGRES_USER: postgres 
+            PGHOST: 127.0.0.1
+            RAILS_ENV: test
+        - image: circleci/postgres:13.4
+          environment:
+            POSTGRES_USER: postgres
+            POSTGRES_HOST_AUTH_METHOD: trust
+            POSTGRES_DB: searching_outlet_test
+      working_directory: ~/searching_outlet
+      steps:
+        - checkout
+        - restore_cache:
+            keys:
+              - v1-dependencies-{{ checksum "Gemfile.lock" }}
+              - v1-dependencies-
+        - run:
+            name: install dependencies
+            command: |
+              gem install bundler -v 2.1.4
+              bundle install --jobs=4 --retry=3 --path vendor/bundle
+        - save_cache:
+            key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+            paths:
+              - ./vendor/bundle
+        - run:
+            name: DBの起動を待つ
+            command: dockerize -wait tcp://127.0.0.1:5432 -timeout 120s
+        - run: bundle exec rake db:create
+        - run: bundle exec rake db:schema:load
+        - run:
+            name: rubocopを実行
+            command: bundle exec rubocop
+        - run:
+            name: rspecを実行
+            command: bundle exec rspec
