@@ -2,7 +2,7 @@ version: 2
 jobs:
    build:
       docker:
-        - image: circleci/ruby:2.6.3-node
+        - image: circleci/ruby:2.7.4-node
           environment:
             POSTGRES_USER: postgres 
             PGHOST: 127.0.0.1
