@@ -1,5 +1,5 @@
 class CavesController < ApplicationController
-  before_action :set_cafe, only: %i[ show edit update destroy ]
+  before_action :set_cafe, only: %i[show edit update destroy]
 
   # GET /caves or /caves.json
   def index
@@ -23,7 +23,7 @@ class CavesController < ApplicationController
   # POST /caves or /caves.json
   def create
     @cafe = Cafe.new(cafe_params)
-    @cafe.user_id = current_user.id 
+    @cafe.user_id = current_user.id
     respond_to do |format|
       if @cafe.save
         format.html { redirect_to @cafe, notice: "登録しました" }
@@ -67,4 +67,5 @@ class CavesController < ApplicationController
     def cafe_params
       params.require(:cafe).permit(:image, :name, :address, :business_hours, :end_business_hours, :number_seats, :wifi, :user_id)
     end
+  end
 end

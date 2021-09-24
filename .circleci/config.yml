@@ -22,12 +22,12 @@ jobs:
   test:
     docker:
       - image: circleci/ruby:2.7-node
-      - image: circleci/postgres:11.6-alpine
+      - image: circleci/postgres:13.4-alpine
         name: "db"
         environment:
           POSTGRES_USER: postgres
           POSTGRES_DB: searching_outlet_test
-          POSTGRES_PASSWORD: ""
+          POSTGRES_PASSWORD: trust
     environment:
       BUNDLE_JOBS: "4"
       BUNDLE_RETRY: "3"
@@ -49,6 +49,9 @@ jobs:
       - run:
           name: Rubocop
           command: bundle exec rubocop
+      - deploy:
+          name: Deploy Master to Heroku
+          command: if [ "${CIRCLE_BRANCH}" == "master" ]; then git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
 
 workflows:
   version: 2

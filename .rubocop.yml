@@ -1,0 +1,34 @@
+inherit_from:
+  - .rubocop_airbnb.yml
+
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'bin/*'
+    - 'config/environments/*'
+    - 'config/application.rb'
+    - 'config/initializers/*'
+    - 'config/spring.rb'
+    - 'lib/tasks/*'
+    - 'vendor/**/*'
+    - 'path/ruby'
+    - 'gemfile'
+
+Metrics/LineLength:
+  Max: 250
+
+Airbnb/OptArgParameters:
+  Exclude:
+    - 'app/helpers/application_helper.rb'
+
+Bundler/DuplicatedGem:
+  Exclude:
+    - 'Gemfile'
+
+Layout/DefEndAlignment:
+  Exclude:
+    - 'app/helpers/application_helper.rb'
+
+Style/PercentLiteralDelimiters:
+  Exclude:
+    - 'Gemfile'
