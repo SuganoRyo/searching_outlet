@@ -33,7 +33,7 @@ jobs:
       BUNDLE_RETRY: "3"
       PGHOST: 127.0.0.1
       PGUSER: postgres
-      PGPASSWORD: ""
+      PGPASSWORD: trust
       RAILS_ENV: test
     steps:
       - setup
