@@ -29,15 +29,15 @@ jobs:
             paths:
               - ./vendor/bundle
         - run:
-            name: DBの起動を待つ
+            name: start-up DB
             command: dockerize -wait tcp://127.0.0.1:5432 -timeout 120s
         - run: bundle exec rake db:create
         - run: bundle exec rake db:schema:load
         - run:
-            name: rspecを実行
+            name: rspec
             command: bundle exec rspec
         - run:
-            name: rubocopを実行
+            name: rubocop
             command: bundle exec rubocop
         - deploy:
             name: Deploy Master to Heroku
