@@ -13,6 +13,7 @@ AllCops:
     - 'vendor/**/*'
     - 'path/ruby'
     - 'gemfile'
+    - 'spec/spec_helper.rb'
 
 Metrics/LineLength:
   Max: 250
