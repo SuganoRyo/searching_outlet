@@ -1,6 +1,5 @@
 class CavesController < ApplicationController
-  before_action :set_cafe, only: [show edit update destroy]
-
+  before_action :set_cafe, only: [:show, :edit, :update, :destroy]
   # GET /caves or /caves.json
   def index
     @q = Cafe.ransack(params[:q])
@@ -58,7 +57,7 @@ class CavesController < ApplicationController
   end
 
   private
-  
+
   def set_cafe
     @cafe = Cafe.find(params[:id])
   end
