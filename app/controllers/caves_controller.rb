@@ -1,5 +1,5 @@
 class CavesController < ApplicationController
-  before_action :set_cafe, only: %i[show edit update destroy]
+  before_action :set_cafe, only: [show edit update destroy]
 
   # GET /caves or /caves.json
   def index
@@ -58,14 +58,12 @@ class CavesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_cafe
-      @cafe = Cafe.find(params[:id])
-    end
+  
+  def set_cafe
+    @cafe = Cafe.find(params[:id])
+  end
 
-    # Only allow a list of trusted parameters through.
-    def cafe_params
-      params.require(:cafe).permit(:image, :name, :address, :business_hours, :end_business_hours, :number_seats, :wifi, :user_id)
-    end
+  def cafe_params
+    params.require(:cafe).permit(:image, :name, :address, :business_hours, :end_business_hours, :number_seats, :wifi, :user_id)
   end
 end
