@@ -12,7 +12,7 @@ jobs:
         environment:
           POSTGRES_DATABASE: searching_outlet_test
           POSTGRES_USER: postgres
-          POSTGRES_HOST_AUTH_METHOD: 'trust'
+          POSTGRES_PASSWORD: password
     working_directory: ~/searching_outlet
     steps:
       - checkout
