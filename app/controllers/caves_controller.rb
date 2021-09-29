@@ -63,6 +63,6 @@ class CavesController < ApplicationController
   end
 
   def cafe_params
-    params.require(:cafe).permit(:image, :name, :address, :business_hours, :end_business_hours, :number_seats, :wifi, :user_id)
+    params.require(:cafe).permit(:image, :name, :address, :business_hours, :end_business_hours, :number_seats, :wifi, :user_id, :latitude, :longitude )
   end
 end

@@ -1,5 +1,5 @@
+<% provide(:title, "cafe") %>
 <%= render "shared/login_header" %>
-
 <div class="detail_title">カフェ詳細</div>
   <div class="cafe_detail">
     <p class="img_detail">
@@ -9,32 +9,33 @@
         <p>画像なし</p>
       <% end %>
     </p>
-    <div class="shop_description">
-      <p>
+    <div class="cafe_description">
+      <p class="cafe_item">
         <strong>
           <i class="fas fa-store"></i>店名:
         </strong>
         <%= @cafe.name %>
       </p>
-      <p>
+      <p class="cafe_item">
         <strong>
           <i class="fas fa-map-marker"></i>住所:
         </strong>
         <%= @cafe.address %>
       </p>
-      <p>
+      <%= render 'shared/cafe_map', cafe: @cafe %>
+      <p class="cafe_item">
         <strong>
           <i class="fas fa-clock"></i>営業時間:
         </strong>
         <%= @cafe.business_hours.strftime( "%H:%M" ) %>~<%= @cafe.end_business_hours.strftime( "%H:%M" ) %>
       </p>
-      <p>
+      <p class="cafe_item">
         <strong>
           <i class="fas fa-lightbulb"></i>コンセント席数:
         </strong>
         <%= @cafe.number_seats %>席
       </p>
-      <p>
+      <p class="cafe_item">
         <strong>
           <i class="fas fa-wifi"></i>Wifi:
         </strong>

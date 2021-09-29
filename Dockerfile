@@ -12,9 +12,3 @@ RUN gem install bundler
 RUN bundle install
 
 ADD . /searching_outlet
-
-FROM ubuntu
- 
-ENV RAILS_ENV="test"
- 
-RUN echo "$RAILS_ENV

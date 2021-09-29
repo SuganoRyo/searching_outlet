@@ -621,10 +621,15 @@ li{
   margin-top: 40px;
 }
 
-.cafe_detail p{
+.cafe_item{
   font-weight: bold;
   font-size: 1.3rem;
   color: #816C61;
+  padding-left: 70px;
+}
+
+.cafe_map{
+  margin-left: 60px;
 }
 
 .detail_link{

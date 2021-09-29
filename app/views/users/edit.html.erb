@@ -1,5 +1,5 @@
+<% provide(:title, "users") %>
 <%= render "shared/login_header" %>
-
 <div class="edit_user_form">
   <h1><i class="fas fa-caret-right"></i>ユーザー編集</h1>
   <%= form_with model: @user, url: user_path, local: true do |f| %>
