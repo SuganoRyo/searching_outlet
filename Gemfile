@@ -31,6 +31,8 @@ gem 'carrierwave'
 
 gem 'ast', '>= 2.4.2'
 
+gem 'geocoder', '~> 1.6.7'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -38,7 +40,7 @@ group :development, :test do
   gem 'ransack'
   gem 'rails-i18n'
   gem 'rubocop-airbnb'
-  gem 'geocoder', '~>1.6.7'
+  gem 'geocoder', '~> 1.6.7'
 end
 
 group :development do
