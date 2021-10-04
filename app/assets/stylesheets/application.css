@@ -835,6 +835,11 @@ input[type=checkbox] {
   text-align: center;
 }
 
+#map{
+  height: 200px;
+  width: 70%;
+}
+
 @media screen and (min-width: 980px) {
   .globalMenuSp ul {
     width: 550px;
@@ -998,7 +1003,6 @@ input[type=checkbox] {
 
   footer{
     margin: 0;
-    margin-top: 15%;
   }
 
   .session_form{
@@ -1177,5 +1181,39 @@ input[type=checkbox] {
     left: 5px;
     font-size: 1rem;
     margin-left: 10px;
-  }  
+  }
+
+  .cafe_detail{
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .cafe_detail img{
+    max-width: 480px;
+    width: 90%;
+    margin: 5%;
+  }
+
+  .cafe_item{
+    padding-left: 5%;
+  }
+
+  .cafe_map{
+    margin-left: 5%;
+  }
+
+  #map{
+    width: 95%;
+  }
+
+  .cafe_container{
+    height: auto;
+    padding-bottom: 5%;
+    position: relative;
+  }
+
+  .pagination{
+    position: absolute;
+    bottom: 0;
+  }
 }
