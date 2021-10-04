@@ -3,7 +3,7 @@ class CavesController < ApplicationController
   # GET /caves or /caves.json
   def index
     @q = Cafe.ransack(params[:q])
-    @caves = @q.result(distinct: true)
+    @caves = @q.result(distinct: true).page(params[:page]).per(8)
   end
 
   # GET /caves/1 or /caves/1.json
