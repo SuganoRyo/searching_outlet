@@ -44,6 +44,7 @@ group :development, :test do
   gem 'rails-i18n'
   gem 'rubocop-airbnb'
   gem 'geocoder', '~> 1.6.7'
+  gem 'nokogiri'
 end
 
 group :development do
