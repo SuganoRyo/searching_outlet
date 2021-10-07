@@ -152,6 +152,7 @@ input{
   font-size: 16px;
   border-radius: 3px;
   border: 2px solid #ddd;
+  cursor: pointer;
 }
 
 .mandatory{
@@ -995,6 +996,8 @@ input[type=checkbox] {
     margin: 0;
     margin-top: 3%;
     margin-left: 10%;
+    margin-bottom: 3%;
+    padding-bottom: 10px;
   }
 
   input{
@@ -1011,6 +1014,7 @@ input[type=checkbox] {
     margin: 0;
     margin-top: 3%;
     margin-left: 10%;
+    margin-bottom: 3%;
   }
 
   .session_form label{
@@ -1165,16 +1169,20 @@ input[type=checkbox] {
     left: 32px;
   }
 
+  .cafe_form .field{
+    padding-top: 10%;
+    height: auto;
+  }
   .field{
     height: 60px;
-    padding-top: 10%;
-    margin: 0;
+    padding-top: 1%;
   }
 
   .show_user_form{
     width: 90%;
     margin-left: 5%;
     margin-top: 7%;
+    margin-bottom: 7%;
   }
 
   .show_field label{
