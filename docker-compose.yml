@@ -18,13 +18,12 @@ services:
     stdin_open: true
     depends_on:
       - db
-      - selenium_chrome
     ports:
       - "3000:3000"
     volumes:
       - .:/searching_outlet
     environment:
-      - "SELENIUM_DRIVER_URL=http://selenium_chrome:4444/wd/hub"
+    - "SELENIUM_DRIVER_URL=http://selenium_chrome:4444/wd/hub"
   selenium_chrome:
     image: selenium/standalone-chrome-debug
     logging:
