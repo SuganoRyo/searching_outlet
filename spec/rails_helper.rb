@@ -1,3 +1,4 @@
+Selenium::WebDriver::Chrome::Service.driver_path = '/usr/local/bin/chromedriver'
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
