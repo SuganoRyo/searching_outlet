@@ -16,7 +16,7 @@
         <div class="cafe_information">
           <div class="cafe_card">
             <div class="cafe_img">
-              <% if cafe.image.attached? %>
+              <% if cafe.image? %>
                 <%= image_tag cafe.image.url %>
               <% else %>
                 <p>画像なし</p>
