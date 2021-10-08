@@ -1,14 +1,23 @@
-unless Rails.env.development? || Rails.env.test?
-  CarrierWave.configure do |config|
+require 'carrierwave/storage/abstract'
+require 'carrierwave/storage/file'
+require 'carrierwave/storage/fog'
+
+CarrierWave.configure do |config|
+  if Rails.env.production? || Rails.env.development? # 開発中もs3使う
+    config.storage :fog
+    config.fog_provider = 'fog/aws'
+    config.fog_directory  = 'searching-outlet-test'
+    config.asset_host = 'https://s3.amazonaws.com/searching-outlet-test'
+    config.fog_public = false
     config.fog_credentials = {
       provider: 'AWS',
-      aws_access_key_id: 'AKIARYLFXZ3HQTHQKMTE',
-      aws_secret_access_key: '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',
-      region: 'ap-northeast-1'
+      aws_access_key_id: 'AWS_ACCESS_KEY_ID',
+      aws_secret_access_key: 'AWS_SECRET_ACCESS_KEY',
+      region: 'ap-northeast-1',
+      # path_style: true
     }
-
-    config.fog_directory  = 'searching-outlet-test'
-    config.cache_storage = :fog
-    config.fog_public = false
+  else
+    config.storage :file
+    config.enable_processing = false if Rails.env.test?
   end
 end
