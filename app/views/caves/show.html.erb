@@ -4,7 +4,7 @@
   <div class="cafe_detail">
     <p class="img_detail">
       <% if @cafe.image? %>
-        <%= image_tag @cafe.image.url %>
+        <%= image_tag @cafe.image.to_s %>
       <% else %>
         <p>画像なし</p>
       <% end %>
