@@ -841,6 +841,14 @@ input[type=checkbox] {
   width: 70%;
 }
 
+.guest_login_button{
+  width: 250px;
+  position: absolute;
+  top: 90%;
+  left: 45%;
+  padding-top: 2%;
+}
+
 @media screen and (min-width: 980px) {
   .globalMenuSp ul {
     width: 550px;
@@ -863,6 +871,12 @@ input[type=checkbox] {
 }
 
 @media screen and (max-width: 480px) {
+  .guest_login_button{
+    top: 79%;
+    left: 38%;
+    padding-top: 0;
+  }
+
 	img {
     width: 50%;
     height: auto;
