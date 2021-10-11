@@ -849,6 +849,40 @@ input[type=checkbox] {
   padding-top: 2%;
 }
 
+.detail_comment{
+  width: 355px;
+  height: 50px;
+  background: #fff;
+  color: #816C61;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 2% auto;
+  padding-top: 15px;
+  border: 3px dashed #816C61;
+}
+
+.user_comment{
+  margin: 5%;
+}
+
+.comment_button input{
+  height: 70px;
+  margin-top: 1%;
+}
+
+.comment_button{
+  text-align: center;
+}
+
+.comment_space{
+  background-color: #fff;
+  width: 90%;
+  margin-left: 5%;
+  padding-top: 10px;
+  height: 470px;
+}
+
 @media screen and (min-width: 980px) {
   .globalMenuSp ul {
     width: 550px;
@@ -1237,5 +1271,14 @@ input[type=checkbox] {
   .pagination{
     position: absolute;
     bottom: 0;
+  }
+
+  .comment_space{
+    height: 300px;
+    margin-bottom: 10px;
+  }
+
+  .comment_button input{
+    height: 40px;
   }
 }

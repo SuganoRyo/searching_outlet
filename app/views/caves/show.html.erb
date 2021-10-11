@@ -51,3 +51,20 @@
       <%= link_to '戻る', caves_path %>
     </div>
   </div>
+  <div class="detail_comment">コメント一覧</div>
+  <div class="comment_space">
+    <% @comments.each do |c| %>
+      <div class="user_comment">
+        <a href="/users/<%= @cafe.user_id %>"><%= c.user.email %></a>
+        <%= c.content %>
+        <hr>
+      </div>
+    <% end %>
+    <div class="comment_button">
+      <%= form_for [@cafe, @comment] do |f| %>
+        <%= f.text_field :content %>
+        <br>
+        <%= f.submit 'コメントする' %>
+      <% end %>
+    </div>
+  </div>

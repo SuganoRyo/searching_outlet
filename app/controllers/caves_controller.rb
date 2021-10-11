@@ -8,6 +8,9 @@ class CavesController < ApplicationController
 
   # GET /caves/1 or /caves/1.json
   def show
+    @cafe = Cafe.find(params[:id])
+    @comments = @cafe.comments
+    @comment = Comment.new
   end
 
   # GET /caves/new
@@ -63,6 +66,6 @@ class CavesController < ApplicationController
   end
 
   def cafe_params
-    params.require(:cafe).permit(:image, :name, :address, :business_hours, :end_business_hours, :number_seats, :wifi, :user_id, :latitude, :longitude)
+    params.require(:cafe).permit(:image, :name, :address, :business_hours, :end_business_hours, :number_seats, :wifi, :user_id, :latitude, :longitude, :content)
   end
 end

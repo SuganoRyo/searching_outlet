@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'areas/show'
-  resources :caves
+  resources :caves do
+    resources :comments, only: [:create]
+  end
   get 'sessions/new'
   root 'home#top'
   resource :user, only: [:new, :create, :show]
