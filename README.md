@@ -59,6 +59,9 @@ google mapがあるのでmapで住所等を検索せずともカフェのおお�
 ・いいね機能  
 ・コメント、レビュー機能  
 
+# ER図  
+![スクリーンショット 2021-10-14 21 27 42](https://user-images.githubusercontent.com/83266893/137317391-9bdc0ade-2b94-4e46-8cf8-0ac08aa3a867.png)
+
 # テスト
 ・Rubocop  
 ・Rspec  
