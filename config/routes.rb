@@ -2,10 +2,15 @@ Rails.application.routes.draw do
   get 'areas/show'
   resources :caves do
     resources :comments, only: [:create]
+    resources :likes, only: [:create, :destroy]
   end
   get 'sessions/new'
   root 'home#top'
-  resource :user, only: [:new, :create, :show]
+  resource :user, only: [:new, :create, :show] do
+    collection do
+      get :likes
+    end
+  end
   resources :users, only: [:edit, :update]
   patch 'user', to: "users#update"
   get 'login', to: "sessions#new"

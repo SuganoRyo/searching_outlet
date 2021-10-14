@@ -883,6 +883,65 @@ input[type=checkbox] {
   height: 470px;
 }
 
+.like_number{
+  width: 355px;
+  height: 50px;
+  background: #fff;
+  color: #816C61;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 2% auto;
+  padding-top: 15px;
+  border: 3px dashed #816C61;
+}
+
+.like_space input{
+  position: absolute;
+  width: 380px;
+  left: 37%;
+  background-color: #816C61;
+  color: #fff;
+  border-radius: 30px;
+}
+
+.like_space input:hover{
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.like_space{
+  height: 140px;
+  margin-top: 5%
+}
+
+.like_detail{
+  width: 355px;
+  height: 50px;
+  background: #fff;
+  color: #816C61;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 2% auto;
+  padding-top: 15px;
+  border: 3px dashed #816C61;
+}
+
+.like_list {
+  text-align: center;
+}
+
+.like_list a{
+  color: #816C61;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.main_like{
+  height: 500px;
+}
+
 @media screen and (min-width: 980px) {
   .globalMenuSp ul {
     width: 550px;
@@ -1280,5 +1339,15 @@ input[type=checkbox] {
 
   .comment_button input{
     height: 40px;
+  }
+
+  .like_space input{
+    width: 300px;
+    left: 15%;
+  }
+
+  .main_like{
+    margin-top: 5%;
+    margin-bottom: 5%
   }
 }

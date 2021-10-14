@@ -37,8 +37,7 @@ RSpec.describe "Caves", type: :request do
     let(:user) { create(:user) }
 
     before do
-      session_params = { session: { email: user.email, password: user.password } }
-      post "/login", params: session_params
+      allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: user.id } }
     end
 
     it 'カフェ詳細画面の表示に成功すること' do

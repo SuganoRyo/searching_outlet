@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_11_130354) do
+ActiveRecord::Schema.define(version: 2021_10_12_113938) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,6 +68,16 @@ ActiveRecord::Schema.define(version: 2021_10_11_130354) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
+  create_table "likes", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "cafe_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["cafe_id"], name: "index_likes_on_cafe_id"
+    t.index ["user_id", "cafe_id"], name: "index_likes_on_user_id_and_cafe_id", unique: true
+    t.index ["user_id"], name: "index_likes_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
@@ -80,4 +90,6 @@ ActiveRecord::Schema.define(version: 2021_10_11_130354) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "comments", "caves"
   add_foreign_key "comments", "users"
+  add_foreign_key "likes", "caves"
+  add_foreign_key "likes", "users"
 end

@@ -1,0 +1,11 @@
+<%= render "shared/login_header" %>
+<div class="main_like">
+  <div class="like_detail">いいね一覧</div>
+  <% current_user.like_caves.each do |cafe| %>
+    <div class="like_list">
+      <%= link_to cafe_path(cafe.id) do %>
+        <%= cafe.name %><br>
+      <% end %>
+    </div>
+  <% end %>
+</div>

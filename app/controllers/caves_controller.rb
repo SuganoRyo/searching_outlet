@@ -8,9 +8,9 @@ class CavesController < ApplicationController
 
   # GET /caves/1 or /caves/1.json
   def show
-    @cafe = Cafe.find(params[:id])
     @comments = @cafe.comments
     @comment = Comment.new
+    @like = Like.new
   end
 
   # GET /caves/new
