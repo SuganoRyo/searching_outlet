@@ -10,6 +10,7 @@ RSpec.describe User, type: :system do
         context 'フォームの入力値が正常' do
           it 'ユーザーの新規作成が成功' do
             visit new_user_path
+            fill_in 'user[name]', with: 'test'
             fill_in 'user[email]', with: 'test@example.com'
             fill_in 'user[password]', with: 'password'
             fill_in 'user[password_confirmation]', with: 'password'
@@ -24,6 +25,7 @@ RSpec.describe User, type: :system do
         context 'メールアドレス未記入' do
           it 'ユーザーの新規作成が失敗' do
             visit new_user_path
+            fill_in 'user[name]', with: 'test'
             fill_in 'user[email]', with: nil
             fill_in 'user[password]', with: 'password'
             fill_in 'user[password_confirmation]', with: 'password'
@@ -38,6 +40,7 @@ RSpec.describe User, type: :system do
         context '登録済メールアドレス' do
           it 'ユーザーの新規作成が失敗する' do
             visit new_user_path
+            fill_in 'user[name]', with: 'test'
             fill_in 'user[email]', with: user.email
             fill_in 'user[password]', with: 'password'
             fill_in 'user[password_confirmation]', with: 'password'
@@ -60,6 +63,7 @@ RSpec.describe User, type: :system do
 
               it 'ユーザーの編集が成功' do
                 visit edit_user_path(user)
+                fill_in 'user[name]', with: 'test'
                 fill_in 'user[email]', with: 'test@example.com'
                 fill_in 'user[password]', with: 'password'
                 fill_in 'user[password_confirmation]', with: 'password'
@@ -76,6 +80,7 @@ RSpec.describe User, type: :system do
 
           it 'ユーザーの編集が失敗' do
             visit edit_user_path(user)
+            fill_in 'user[name]', with: 'test'
             fill_in 'user[email]', with: nil
             fill_in 'user[password]', with: 'password'
             fill_in 'user[password_confirmation]', with: 'password'

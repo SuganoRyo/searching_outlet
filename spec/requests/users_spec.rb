@@ -14,7 +14,7 @@ RSpec.describe "Users", type: :request do
     let(:user) { create(:user) }
 
     it 'ユーザーが正常に作成されたか' do
-      valid_params = { email: user.email, password: user.password, password_confirmation: user.password }
+      valid_params = { name: user.name, email: user.email, password: user.password, password_confirmation: user.password }
       expect { get '/user/new', params: { user: valid_params } }
     end
   end
