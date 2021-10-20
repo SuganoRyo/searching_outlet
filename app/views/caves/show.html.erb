@@ -55,7 +55,7 @@
   <div class="comment_space">
     <% @comments.each do |c| %>
       <div class="user_comment">
-        <a href="/users/<%= @cafe.user_id %>"><%= c.user.email %></a>
+        <a href="/users/<%= @cafe.user_id %>"><%= c.user.name %></a>
         <%= c.content %>
         <hr>
       </div>

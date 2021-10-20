@@ -6,6 +6,12 @@
   <%= form_with model: @user, url: user_path, local: true do |f| %>
     <div class="field">
       <span class ="mandatory">※必須</span>
+      <%= f.label :名前 %><br>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <span class ="mandatory">※必須</span>
       <%= f.label :メールアドレス %><br>
       <%= f.text_field :email %>
     </div>
