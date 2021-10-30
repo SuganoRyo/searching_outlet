@@ -4,9 +4,9 @@ class CommentsController < ApplicationController
     @comment = @cafe.comments.new(comment_params)
     @comment.user_id = current_user.id
     if @comment.save
-      redirect_back(fallback_location: caves_path)
+      redirect_back(fallback_location: caves_path, notice: "コメントしました。")
     else
-      redirect_back(fallback_location: caves_path)
+      redirect_back(fallback_location: caves_path, notice: "コメントに失敗しました。")
     end
   end
 

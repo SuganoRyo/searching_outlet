@@ -880,7 +880,8 @@ input[type=checkbox] {
   width: 90%;
   margin-left: 5%;
   padding-top: 10px;
-  height: 470px;
+  padding-bottom: 15px;
+  height: auto;
 }
 
 .like_number{
