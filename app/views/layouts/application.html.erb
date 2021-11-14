@@ -37,29 +37,28 @@
       </div>
     </footer>
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-      <script>
-        window.sr = ScrollReveal({ reset: false ,mobile: true});
-        if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
-          sr.reveal( '.worries_item', { origin: 'left' , distance: '80%', duration: 800 , scale: 1.0, delay :1000 ,opacity: 0.5,});
-          sr.reveal( '.possible_to_three', { origin: 'bottom' , distance: '50%', duration: 500 , scale: 1.0, delay :700 ,opacity: 0.5, viewFactor: 0.8,});
-          sr.reveal( '.possible_to_three_area', { origin: 'bottom' , distance: '50%', duration: 500 , scale: 1.0, delay :700 ,opacity: 0.5, viewFactor: 0.5,});
-        }
-      </script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script>
-          if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
-            $(function() {
-              $('.hamburger').click(function() {
-                $(this).toggleClass('active');
- 
-                if ($(this).hasClass('active')) {
-                  $('.globalMenuSp').addClass('active');
-                } else {
-                  $('.globalMenuSp').removeClass('active');
-                }
-              });
-            });
-          }
-        </script>
+    <script>
+      window.sr = ScrollReveal({ reset: false ,mobile: true});
+      if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
+        sr.reveal( '.worries_item', { origin: 'left' , distance: '80%', duration: 800 , scale: 1.0, delay :1000 ,opacity: 0.5,});
+        sr.reveal( '.possible_to_three', { origin: 'bottom' , distance: '50%', duration: 500 , scale: 1.0, delay :700 ,opacity: 0.5, viewFactor: 0.8,});
+        sr.reveal( '.possible_to_three_area', { origin: 'bottom' , distance: '50%', duration: 500 , scale: 1.0, delay :700 ,opacity: 0.5, viewFactor: 0.5,});
+      }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
+        $(function() {
+          $('.hamburger').click(function() {
+            $(this).toggleClass('active');
+            if ($(this).hasClass('active')) {
+              $('.globalMenuSp').addClass('active');
+            } else {
+              $('.globalMenuSp').removeClass('active');
+            }
+          });
+        });
+      }
+    </script>
   </body>
 </html>

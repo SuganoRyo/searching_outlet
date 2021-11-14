@@ -35,6 +35,8 @@ google mapがあるのでmapで住所等を検索せずともカフェのおお�
 # 使用技術
 ・Ruby2.7.4  
 ・Ruby on Rails6.1.4.1  
+・ScrollReveal  
+・jQuery  
 ・Postgresql13.3  
 ・Puma  
 ・Docker/Dcoker-compose  
