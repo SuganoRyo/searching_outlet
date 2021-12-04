@@ -5,7 +5,7 @@ RSpec.describe "Users", type: :request do
     let(:user) { create(:user) }
 
     it '新規登録画面の表示に成功すること' do
-      get '/user/new'
+      get '/users/new'
       expect(response).to have_http_status(200)
     end
   end
@@ -28,7 +28,7 @@ RSpec.describe "Users", type: :request do
     end
 
     it '詳細画面の表示に成功すること' do
-      get user_path
+      get "/users/#{user.id}"
       expect(response).to have_http_status(302)
     end
   end
@@ -43,7 +43,7 @@ RSpec.describe "Users", type: :request do
 
     it '編集画面の表示に成功すること' do
       get "/users/#{user.id}/edit"
-      expect(response).to have_http_status(200)
+      expect(response).to have_http_status(302)
     end
   end
 

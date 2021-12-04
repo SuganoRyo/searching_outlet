@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :already_login?, only: [:new, :create]
-  before_action :login?, only: :show
+  before_action :login?, only: [:show, :destroy, :edit, :update]
   def new
     @user = User.new
   end
@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to user_path, notice: "新規登録しました。"
+      redirect_to caves_path, notice: "新規登録しました。"
     else
       render :new
     end
@@ -29,6 +29,13 @@ class UsersController < ApplicationController
       flash.now[:alert] = "編集に失敗しました。"
       render :edit
     end
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    flash[:notice] = 'ユーザーを削除しました。'
+    redirect_to admin_users_path
   end
 
   private

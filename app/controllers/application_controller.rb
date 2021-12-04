@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   def already_login?
     unless current_user.nil?
-      redirect_to user_path, notice: "ログイン済みです。"
+      redirect_to caves_path, notice: "ログイン済みです。"
     end
   end
 

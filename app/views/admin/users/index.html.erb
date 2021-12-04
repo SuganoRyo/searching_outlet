@@ -1,0 +1,22 @@
+<% provide(:title, "admin") %>
+<%= render "shared/login_header" %>
+<h2 class="admin_title">管理画面:ユーザー管理一覧</h2>
+<div class="admin_users">
+  <table>
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr class="registered_users">
+          <td><%= user.id %></td>
+          <td><%= user.email %></td>
+          <td><%= link_to '削除', user, method: :delete, data: { confirm: '本当に削除しますか?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

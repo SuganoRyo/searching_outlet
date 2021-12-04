@@ -6,6 +6,7 @@ RSpec.describe "Caves", type: :request do
     let(:user) { create(:user) }
 
     before do
+      allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: user.id } }
       session_params = { session: { email: user.email, password: user.password } }
       post "/login", params: session_params
     end
@@ -51,6 +52,7 @@ RSpec.describe "Caves", type: :request do
     let(:user) { create(:user) }
 
     before do
+      allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: user.id } }
       session_params = { session: { email: user.email, password: user.password } }
       post "/login", params: session_params
     end
@@ -66,6 +68,7 @@ RSpec.describe "Caves", type: :request do
     let(:user) { create(:user) }
 
     before do
+      allow_any_instance_of(ActionDispatch::Request).to receive(:session) { { user_id: user.id } }
       session_params = { session: { email: user.email, password: user.password } }
       post "/login", params: session_params
     end
