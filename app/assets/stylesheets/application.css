@@ -1140,6 +1140,8 @@ input[type=checkbox] {
 
   .application_about{
     width: 95%;
+    margin-top: 10%;
+    margin-bottom: 10%;
   }
 
   .about_title_text{
@@ -1155,31 +1157,35 @@ input[type=checkbox] {
   }
 
   .worries_list{
-    max-width: 480px;
-    width: 80%;
+    width: 420px;
     height: 220px;
     padding: 0;
     padding-top: 5px;
     margin: 0;
+    margin-left: 7px;
   }
 
   .worries_area{
-    left: 5%;
+    left: 0;
     padding-top: 5px;
-    max-width: 480px;
+    max-width: 338px;
   }
 
   .worries_list span{
-    padding-left: 30px;
+    padding-left: 60px;
   }
 
   .worries_item{
-    width: 100%;
+    width: 90%;
     padding: 0;
-    padding-left: 1%;
+    padding-left: 5%;
     font-size: 2vmax;
     white-space: nowrap;
     Word-break: break-all;
+  }
+
+  .possible_to_three{
+    margin-top: 10%;
   }
 
   .possible_to_three_area{
@@ -1188,6 +1194,7 @@ input[type=checkbox] {
   }
 
   .main_three_described_location{
+    width: 438px;
     height: 430px;
     padding-top: 20px;
   }
@@ -1431,6 +1438,7 @@ input[type=checkbox] {
 
   .show_user_form{
     width: 90%;
+    height: 350px;
     margin-left: 5%;
     margin-top: 7%;
     margin-bottom: 7%;
@@ -1509,5 +1517,15 @@ input[type=checkbox] {
     height: 600px;
     margin-left: 5%;
     margin-bottom: 5%;
+  }
+
+  .admin_users{
+    width: 90%;
+    margin: 5%;
+  }
+
+  .admin_users table{
+    width: 70%;
+    margin-left: 9%;
   }
 }

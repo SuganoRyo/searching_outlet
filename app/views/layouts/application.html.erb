@@ -52,7 +52,7 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-      if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
+      if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
         $(function() {
           $('.hamburger').click(function() {
             $(this).toggleClass('active');
