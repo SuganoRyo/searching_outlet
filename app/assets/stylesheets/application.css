@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
 .spinner {
   position: absolute;
   top: 50%;
@@ -1109,8 +1114,9 @@ input[type=checkbox] {
 
 @media screen and (max-width: 480px) {
   .guest_login_button{
-    top: 79%;
-    left: 38%;
+    width: 50%;
+    top: 500px;
+    left: 36%;
     padding-top: 0;
   }
 
@@ -1120,22 +1126,29 @@ input[type=checkbox] {
   }
 
   .button-content{
-    width: 210px;
-    top: 5px;
+    width: 50%;
+    top: 20%;
   }
 
   .btn{
-    width: 100px;
+    width: 45%;
+    height: auto;
+    font-size: 0.8rem;
+  }
+
+  .btn_start_app{
+    width: 55%;
   }
 
   .catch_copy{
     width: 90%;
-    height: 35%;
-    left: 20px;
+    height: auto;
+    left: 5%;
   }
 
   .catch_text{
-    font-size: 30px; 
+    padding-top: 10%;
+    font-size: 1.6rem; 
   }
 
   .application_about{
@@ -1157,35 +1170,36 @@ input[type=checkbox] {
   }
 
   .worries_list{
-    width: 420px;
-    height: 220px;
+    width: 100%;
+    height: 70%;
     padding: 0;
     padding-top: 5px;
     margin: 0;
-    margin-left: 7px;
+    margin-left: 2.5%;
   }
 
   .worries_area{
     left: 0;
     padding-top: 5px;
-    max-width: 338px;
+    max-width: 95%;
   }
 
   .worries_list span{
-    padding-left: 60px;
+    padding-left: 10%;
   }
 
   .worries_item{
     width: 90%;
     padding: 0;
-    padding-left: 5%;
-    font-size: 2vmax;
+    padding-left: 1%;
+    font-size: 1.6vmax;
     white-space: nowrap;
     Word-break: break-all;
   }
 
   .possible_to_three{
     margin-top: 10%;
+    width: 90%;
   }
 
   .possible_to_three_area{
@@ -1193,29 +1207,33 @@ input[type=checkbox] {
     display: block;
   }
 
+  .title_header{
+    font-size: 1.5rem;
+  }
+
   .main_three_described_location{
-    width: 438px;
+    width: 100%;
     height: 430px;
     padding-top: 20px;
   }
 
   .main_three_text{
-    height: 410px;
+    height: 97%;
     margin: 0;
-    margin-left: 40px;
+    margin-left: 9%;
   }
 
   .recommend_item{
-    width: 320px;
+    width: 95%;
     margin: 0;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    margin-left: 15%;
+    margin-top: 5%;
+    margin-bottom: 15%;
+    margin-left: 2%;
   }
 
   .recommend_title{
     white-space: nowrap;
-    font-size: 2vmax;
+    font-size: 0.8rem;
     margin: 0;
     margin-top: 3%;
   }
@@ -1229,6 +1247,11 @@ input[type=checkbox] {
     margin: 0;
     margin-top: 3%;
     margin-left: 22%;
+  }
+
+  .text_content{
+    padding-top: 5%;
+    padding-bottom: 5%;
   }
 
   .application_recommend{
@@ -1249,17 +1272,25 @@ input[type=checkbox] {
   }
 
   .user_form{
-    width: 80%;
+    width: 90%;
     height: 80%;
     margin: 0;
     margin-top: 3%;
-    margin-left: 10%;
+    margin-left: 5%;
     margin-bottom: 3%;
     padding-bottom: 10px;
   }
 
-  input{
+  .user_form input{
     width: 70%;
+  }
+
+  .user_form .field label{
+    left: 30%;
+  }
+
+  input{
+    width: 30%;
   }
 
   footer{
@@ -1280,13 +1311,15 @@ input[type=checkbox] {
   }
 
   .member_check{
-    margin: 0;
-    margin-top: 3%;
+    display: none;
   }
 
   .session_form a{
-    top: 70%;
-    left: 40%;
+    display: none;
+  }
+
+  .session_field input{
+    width: 60%;
   }
 
   .search_cafe_field input{
@@ -1390,8 +1423,8 @@ input[type=checkbox] {
     transform: translateY(0%);
   }
 
-  .cafe_container{
-    margin-left: 15%;
+  .area_container{
+    width: 90%;
   }
 
   .nagoya_area h3{
@@ -1400,30 +1433,35 @@ input[type=checkbox] {
 
   .nagoya_area{
     font-size: 1.2rem;
-    margin: 7.5%;
+    margin: 6%;
     padding-bottom: 20px;
     padding-top: 20px;
     padding-right: 25px;
   }
 
   .other_area h3{
-    width: 33%;
+    width: 45%;
+    margin-left: 35%;
   }
 
   .other_area{
     font-size: 1.15rem;
-    margin: 7.5%;
+    margin: 6%;
     padding-bottom: 20px;
     padding-top: 20px;
     padding-right: 25px;
   }
 
-  .cafe_form{
-    margin-left: 8%;
-    width: 80%;
+  .new_title{
+    width: 90%;
   }
 
-  .cafe_form label{
+  .cafe_form{
+    margin-left: 5%;
+    width: 85%;
+  }
+
+  /*.cafe_form label{
     left: 32px;
   }
 
@@ -1431,9 +1469,25 @@ input[type=checkbox] {
     padding-top: 10%;
     height: auto;
   }
+
   .field{
     height: 60px;
-    padding-top: 1%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+  }*/
+
+  .field span{
+    left: 10%;
+    top: 5%;
+  }
+
+  /*.field label{
+    left: 30%;
+    top: 2%;
+  }*/
+
+  .field select{
+    width: 15%;
   }
 
   .show_user_form{
@@ -1444,9 +1498,13 @@ input[type=checkbox] {
     margin-bottom: 7%;
   }
 
+  .show_field{
+    font-size: 0.7rem;
+  }
+
   .show_field label{
     left: 5px;
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .cafe_detail{
@@ -1462,6 +1520,7 @@ input[type=checkbox] {
 
   .cafe_item{
     padding-left: 5%;
+    font-size: 0.7rem;
   }
 
   .cafe_map{
@@ -1472,10 +1531,20 @@ input[type=checkbox] {
     width: 95%;
   }
 
+  .cafe_information{
+    width: 90%;
+  }
+  
   .cafe_container{
     height: auto;
     padding-bottom: 5%;
     position: relative;
+    margin-left: 0;
+    display: inline-block;
+  }
+
+  .smaller_container{
+    margin-left: 7%;
   }
 
   .pagination{
@@ -1486,15 +1555,17 @@ input[type=checkbox] {
   .comment_space{
     height: auto;
     margin-bottom: 10px;
+    font-size: 0.7rem;
   }
 
   .comment_button input{
-    height: 40px;
+    height: auto;
+    width: 50%;
   }
 
   .like_space input{
-    width: 300px;
-    left: 15%;
+    width: 90%;
+    left: 5%;
   }
 
   .main_like{
@@ -1504,19 +1575,26 @@ input[type=checkbox] {
 
   .edit_field{
     margin: 20px 0 20px;
-    height: 80px;
+    height: 40px;
   }
 
   .edit_field label{
-    top: 40px;
-    left: 25px;
+    top: 20%;
+    left: 5%;
+    font-size: 0.8rem;
+  }
+
+  .edit_field input{
+    right: 5%;
   }
 
   .edit_user_form{
     width: 90%;
-    height: 600px;
+    height: auto;
     margin-left: 5%;
-    margin-bottom: 5%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    padding-bottom: 5%;
   }
 
   .admin_users{
@@ -1527,5 +1605,29 @@ input[type=checkbox] {
   .admin_users table{
     width: 70%;
     margin-left: 9%;
+  }
+
+  .index_title{
+    width: 90%;
+  }
+
+  #cafe_business_hours_4i{
+    margin-left: 25%;
+  }
+
+  .cafe_form .field input{
+    margin-left: 30%;
+  }
+
+  .detail_title{
+    width: 90%;
+  }
+
+  .like_number{
+    width: 90%;
+  }
+
+  .detail_comment{
+    width: 90%;
   }
 }
