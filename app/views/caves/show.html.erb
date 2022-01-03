@@ -1,12 +1,17 @@
 <% provide(:title, "cafe") %>
 <%= render "shared/login_header" %>
+<div id="my-spinner" class="box">
+  <div class="spinner type1">
+    <span>Loading...</span>
+  </div>
+</div>
 <div class="detail_title">カフェ詳細</div>
   <div class="cafe_detail">
     <p class="img_detail">
       <% if @cafe.image? %>
         <%= image_tag @cafe.image.to_s %>
       <% else %>
-        <p>画像なし</p>
+        <img src='/assets/no_image.jpg'>
       <% end %>
     </p>
     <div class="cafe_description">

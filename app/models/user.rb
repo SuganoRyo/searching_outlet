@@ -13,7 +13,7 @@ class User < ApplicationRecord
 
   validates :password_confirmation, presence: true
 
-  validates :name, presence: true
+  validates :name, presence: true, length: { maximum: 30, allow_blank: true }
 
   def already_liked?(cafe)
     likes.exists?(cafe_id: cafe.id)
